@@ -1,167 +1,156 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en">
 
 <head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-<!-- Meta Tags -->
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <title>ED3</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
 
-<meta name="description" content=""/>
-<title>ABOUT</title>  
-<link href="assets/img/3.jpg" rel="icon">
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Inconsolata:400,500,600,700|Raleway:400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
-<!-- Mobile Specifics -->
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="HandheldFriendly" content="true"/>
-<meta name="MobileOptimized" content="320"/>   
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
-<!-- Bootstrap -->
-<link href="assets/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
 
-<!-- Main Style -->
-<link href="assets/css/main.css" rel="stylesheet">
-
-<!-- Responsive -->
-<link href="assets/css/responsive.css" rel="stylesheet">
-
-<!-- Google Font -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cutive+Mono&display=swap" rel="stylesheet">
-
-<!-- Fav Icon -->
-<link rel="shortcut icon" href="#">
-
-<link rel="apple-touch-icon" href="#">
-<link rel="apple-touch-icon" sizes="114x114" href="#">
-<link rel="apple-touch-icon" sizes="72x72" href="#">
-<link rel="apple-touch-icon" sizes="144x144" href="#">
-
-<!-- Modernizr -->
-<script src="assets/js/modernizr.js"></script>
-
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+  
+  <style>
+    body {
+      background-color: #131415;
+    }
+    #animation {
+      background-color: rgba(19, 20, 21, 0.8); /* Fundo com opacidade */
+    }
+  </style>
 </head>
-
 
 <body>
 
-<!-- Header -->
-<header>
-	<div class="container">
-    	<div class="row">
-        	<div class="span2">
-            	<div id="logo">
-        			<a href="index.html" title="NAME">.EDE</a>
-        		</div>
-            </div>
-            <div class="span10">
-        		<nav id="menu">
-                    <ul id="menu-nav">
-                        <li><a href="3d.html">.3D</a></li>
-                        <li><a href="web.html">.W3B</a></li> 
-                        <li><a href="about.html">.ABOUT</a></li>
-                        <li><a href="contact.html">.CONTACT</a></li>
-                    </ul>
-                </nav>
-        	</div>
+  <!-- ======= Navbar ======= -->
+  <div class="collapse navbar-collapse custom-navmenu" id="main-navbar">
+    <div class="container py-2 py-md-5">
+      <div class="row align-items-start">
+        <div class="col-md-2">
+          <ul class="custom-menu">
+            <li class="active"><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Me</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
         </div>
-    </div>
-</header>
-<!-- End Header -->
-
-
-<section id="single-team-about" class="container">
-    <div class="row text-center">
-      
-        <div class="team-img-about">
-          <img src="assets/img/about.jpg" alt="About">
-        </div>
-  
-    </div>
-</section>
-
-<br/>
-
-<!-- Start Intro Box -->
-<section id="intro-box" class="margin-0">
-	<div class="container">
-    <div class="row">
-        <div class="span12">   
-          <h3 class="center">Multimedia Artist | 
-         </h3>
-        </div> 
-      </div>
-    </div>
-  </section>
-<!-- End Intro Box -->
-
-<!-- Services -->
-<section id="single-team" class="container">
-  <div class="row">
-    <div class="span12">
-      <div class="team-name">
-        
-My name is Diogo Nóbrega. As a Multimedia artist, my best skill sets lies in 3D software, live perfornmances, and sound design. 
-  I am particularly passionate about music and VJing, merging experimental sound with electronic music and generative visuals.
-In addition to my creative pursuits, Im exploring into the realms of creative and visual programming, 
-as well as interactive installations using software like MadMapper, MAX MPS and TouchDesigner. I also like physical computing.
       </div>
     </div>
   </div>
-</section>
-<!-- End Services -->
 
-<br/>
-<br/>
-      
-<!-- Experiences  
-  
-<section id="single-team" class="container">
-  <div class="row">
-    <div class="span4">
-      <div class="team-description">
-         <br/>
-          <p>Experience</p>
-      </div>
+  <nav class="navbar navbar-light custom-navbar">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">EDE.</a>
+      <a href="#" class="burger" data-bs-toggle="collapse" data-bs-target="#main-navbar">
+        <span></span>
+      </a>
     </div>
-    <div class="span4">
-      <div class="team-name">
-        <br/>
-        <p>Experience<br/>
-        <h7>Where</h7></p>
-        <p>Experience<br/>
-        <h7>Where</h7></p>
+  </nav>
+
+  <main id="main">
+
+    <section class="section pb-5">
+      <div class="container">
+        <div class="row mb-5 align-items-end">
+          <div class="col-md-6" data-aos="fade-up">
+            <h2>About Me</h2>
+            <p class="mb-0"></p>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-4 ml-auto order-2" data-aos="fade-up">
+            <div id="animation"></div>
+          </div>
+
+          <div class="col-md-7 mb-5 mb-md-0" data-aos="fade-up">
+            <p><img src="assets/img/about.jpg" alt="Image" class="img-fluid"></p>
+            <p>My name is Diogo Nóbrega. As a Multimedia artist, my best skill sets lies in 3D software, live performances, and sound design. 
+              I am particularly passionate about music and VJing, merging experimental sound with electronic music and generative visuals. 
+
+             <p>In addition to my creative pursuits, Im exploring into the realms of creative and visual programming, as well as interactive installations using software like MadMapper, MAX MPS and TouchDesigner. </p> 
+             
+             I also like physical computing.</p>
+            <p><a href="#" class="readmore">Download my CV</a></p>
+          </div>
+        </div>
       </div>
-    </div>
-    <div class="span4">
-      <div class="team-name">
-        <br/>
-        <p>Experience<br/>
-        <h7>Where</h7></p>
-        <p>Experience<br/>
-        <h7>Where</h7></p>
+    </section>
+  </main><!-- End #main -->
+
+   <!-- ======= Footer ======= -->
+ <footer class="footer" role="contentinfo">
+  <div class="container">
+    <div class="row justify-content-center text-center">
+      <div class="col-12 social">
+        <a href="https://www.artstation.com/diogo_jvn"><span class="bi bi-box"></span></a>
+        <a href="https://www.instagram.com/diogo_jvn/"><span class="bi bi-instagram"></span></a>
+        <a href="https://www.linkedin.com/in/diogojvn/"><span class="bi bi-linkedin"></span></a>
       </div>
     </div>
   </div>
-</section>
-
-End Experiences -->
-   
-<br/>
-<br/>
-<br/>
-
-<!-- Start Footer -->
-<footer class="footer-widgets">
-	<div class="container">
-    	<div class="row">
-         	<div class="widget text-center">
-             <h7><a href="https://www.instagram.com/diogo_jvn/" target="_blank">.INSTAGRAM</a> &nbsp; • &nbsp; <a href="https://www.linkedin.com/in/diogojvn/" target="_blank">.LINKEDIN</a> &nbsp; • &nbsp; <a href="https://www.artstation.com/diogo_jvn" target="_blank">.ARTSTATION</a>     
-            </div> 
-        </div>
-    </div>
 </footer>
-<!-- End Footer -->
+
+<a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+  <script>
+    function setup() {
+      let canvas = createCanvas(400, 400);
+      canvas.parent('animation');
+      canvas.style('background-color', 'rgba(19, 20, 21, 0.8)');  // Fundo com opacidade
+      angleMode(DEGREES);
+    }
+
+    function draw() {
+      clear();  // Limpa o canvas para criar efeito de transparência
+      stroke(255);
+      translate(width / 2, height);
+      branch(100);
+    }
+
+    function branch(len) {
+      let angle = map(mouseX, 0, width, 15, 45);
+      line(0, 0, 0, -len);
+      translate(0, -len);
+      if (len > 4) {
+        push();
+        rotate(angle);
+        branch(len * 0.67);
+        pop();
+        push();
+        rotate(-angle);
+        branch(len * 0.67);
+        pop();
+      }
+    }
+  </script>
+
 </body>
+
 </html>
