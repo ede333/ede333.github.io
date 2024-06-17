@@ -21,6 +21,9 @@ color: #0f3500;
 
 
 
+.list-ball li::marker {
+  color: #2e880a; /* Cor dos marcadores da lista */
+}
 
 
 body {
