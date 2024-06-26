@@ -14,7 +14,7 @@
   <link href="" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=https://fonts.googleapis.com/css?family=Inconsolata:400,500,600,700|Raleway:400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Inconsolata:400,500,600,700|Raleway:400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
@@ -25,9 +25,74 @@
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
 
+   <!-- Styles for the animation -->
+  <style>
+    #p5Canvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: -1;
+    }
+  </style>
+
 </head>
 
 <body>
+
+   <!-- Animation Canvas -->
+   <div id="p5Canvas"></div>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+   <script>
+     let points = [];
+
+     function setup() {
+       let canvas = createCanvas(windowWidth, windowHeight);
+       canvas.parent('p5Canvas');
+       pixelDensity(2);
+       angleMode(DEGREES);
+       noiseDetail(1);
+
+       let density = 100;
+       for (let x = 0; x <= width; x += width / density) {
+         for (let y = 0; y <= height; y += width / density) {
+           let p = createVector(x + random(-10, 10), y + random(-10, 10));
+           points.push(p);
+         }
+       }
+       
+     }
+
+     function draw() {
+       if (frameCount < 400) {
+         noStroke();
+         let mult = 0.01;
+         for (let j = 0; j < 1; j++) {
+           for (let i = 0; i < points.length; i++) {
+             let r = map(points[i].x, 0, width, 50, 255);
+             let g = map(points[i].y, 0, height, 255, 50);
+             let b = map(points[i].x, 0, width, 255, 50);
+
+             // Para ainda menos saturação, use tons de cinza
+             
+
+             fill(r, g, b, 10);
+
+             let angle = map(noise(points[i].x * mult, points[i].y * mult), 0, 1, 0, 720);
+             points[i].add(createVector(cos(angle), sin(angle)));
+             ellipse(points[i].x, points[i].y, 1);
+           }
+         }
+       } else {
+         noLoop();
+       }
+     }
+
+
+     function windowResized() {
+       resizeCanvas(windowWidth, windowHeight);
+       background(10, 20, 30); // Reaplica o fundo ao redimensionar
+     }
+   </script>
 
   <!-- ======= Navbar ======= -->
   <div class="collapse navbar-collapse custom-navmenu" id="main-navbar">
@@ -40,9 +105,7 @@
             <li><a href="contact.html">Contact</a></li>
           </ul>
         </div>
-
       </div>
-
     </div>
   </div>
 
@@ -70,7 +133,6 @@
               <a href="#" data-filter=".web">LIVE</a>
               <a href="#" data-filter=".design">INSTALATION</a>
               <a href="#" data-filter=".branding">3D</a>
-              <!--<a href="#" data-filter=".photography">Photography</a>-->
             </div>
           </div>
         </div>
@@ -195,7 +257,6 @@
     </div>
   </footer>
   
-
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
   <!-- Vendor JS Files -->
