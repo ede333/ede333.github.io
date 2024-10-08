@@ -7,11 +7,22 @@
   font-size: 2em; /* Tamanho de fonte desejado */
 }
 
-
+/*///YOUTUBE
 
 /* ==================================================
    Basic Styles
 ================================================== */
+
+#imageCarousel .carousel-inner {
+	max-height: 500px; /* Ajuste a altura conforme necessário */
+	overflow: hidden;
+  }
+  
+  .carousel-item img {
+	width: 100%;
+	object-fit: cover; /* Garante que as imagens se ajustem corretamente */
+  }
+  
 
 html{
 	width:100%;
