@@ -23,6 +23,55 @@
 }
 
 /* Pseudo-elemento para a imagem de fundo invertida */
+
+
+.channel-header2 {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px;
+  border-radius: 20px;
+  margin-bottom: 40px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  height: 200px; /* Define uma altura fixa */
+}
+
+/* Pseudo-elemento para a imagem de fundo invertida */
+.channel-header2::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('/assets/img/edefundo.png'); /* Insira o caminho para sua imagem */
+  background-size: fill; /* Faz a imagem cobrir todo o cabeçalho */
+  transform: scaleX(-1); /* Inverte a imagem horizontalmente */
+  z-index: -1; /* Coloca a imagem atrás do conteúdo do cabeçalho */
+  border-radius: 20px; /* Mantém o arredondamento das bordas */
+}
+
+/* Efeito da Imagem e Bordas */
+.channel-header2 img {
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border: 5px solid red; /* Anel vermelho ao redor da foto de perfil */
+  transition: transform 0.3s;
+}
+
+.channel-header2 img:hover {
+  transform: scale(1.1);
+}
+
+
+
+
+
+
 .channel-header::before {
   content: '';
   position: absolute;
