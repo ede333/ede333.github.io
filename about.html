@@ -30,14 +30,95 @@
   <style>
     body {
       background-color: #131415;
+      position: relative;
     }
-    #animation {
-      background-color: rgba(19, 20, 21, 0.8); /* Fundo com opacidade */
+    
+    #background-animation {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
+    
+    .content-wrapper {
+      position: relative;
+      z-index: 1;
+      background-color: rgba(19, 20, 21, 0.85);
+      backdrop-filter: blur(1px);
+    }
+    
+    .main-content {
+      background-color: rgba(19, 20, 21, 0.9);
+      border-radius: 8px;
+      padding: 30px;
+      margin: 20px 0;
+    }
+    
+    .about-image {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    }
+    
+    .text-content {
+      color: #ffffff;
+      line-height: 1.6;
+    }
+    
+    .text-content h2 {
+      color: #cf9c21;
+      margin-bottom: 20px;
+    }
+    
+    .text-content p {
+      margin-bottom: 15px;
+      text-align: justify;
+    }
+    
+    .readmore {
+      color: #cf9c21;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+    
+    .readmore:hover {
+      color: #cf9c21;
+    }
+    
+    /* Navbar adjustments */
+    .custom-navbar {
+      background-color: rgba(19, 20, 21, 0.95);
+      backdrop-filter: blur(5px);
+    }
+    
+    .footer {
+      background-color: rgba(19, 20, 21, 0.95);
+      backdrop-filter: blur(5px);
+    }
+    
+    @media (max-width: 768px) {
+      .main-content {
+        padding: 20px;
+      }
+      
+      .row {
+        flex-direction: column;
+      }
+      
+      .col-md-5, .col-md-7 {
+        margin-bottom: 20px;
+      }
     }
   </style>
 </head>
 
 <body>
+  <!-- Background Animation -->
+  <div id="background-animation"></div>
 
   <!-- ======= Navbar ======= -->
   <div class="collapse navbar-collapse custom-navmenu" id="main-navbar">
@@ -48,7 +129,6 @@
             <li class="active"><a href="index.html">Home</a></li>
             <li><a href="about.html">About Me</a></li>
             <li><a href="creativeprocess.html">More</a></li>
-            
           </ul>
         </div>
       </div>
@@ -64,55 +144,46 @@
     </div>
   </nav>
 
-  <main id="main">
+  <div class="content-wrapper">
+    <main id="main">
+      <section class="section pb-5">
+        <div class="container">
+          <div class="main-content">
+            <div class="row align-items-center">
+              <div class="col-md-5 mb-4 mb-md-0" data-aos="fade-up">
+                <img src="assets/img/about.jpeg" alt="Ede - Diogo Nóbrega" class="about-image">
+              </div>
+              
+              <div class="col-md-7 text-content" data-aos="fade-up">
+                <h2>About Me</h2>
+                <p>Ede, the artistic pseudonym of Diogo Nóbrega, is an experimental electronic musician, multi-instrumentalist, and multimedia artist. Born in Madeira Island, he discovered his passion for music at an early age. He was fascinated by learning different instruments, nurturing a continuous desire to explore the world of sound.</p>
+                
+                <p>Today, he defines himself as a multimedia artist with a particular focus on sound. Driven by experimentalism, he finds inspiration in creating new sounds, often using unconventional or non-typically musical elements. He always seeks to integrate his minimalist sounds with visuals that convey the same feeling and aims to create innovative music and experiences through unique combinations of different styles and sounds.</p>
+                
+                <p><a href="cv.html" class="readmore">CV</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main><!-- End #main -->
 
-    <section class="section pb-5">
+    <!-- ======= Footer ======= -->
+    <footer class="footer" role="contentinfo">
       <div class="container">
-        <div class="row mb-5 align-items-end">
-          <div class="col-md-6" data-aos="fade-up">
-            <h2>About Me</h2>
-            <p class="mb-0"></p>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="col-md-4 ml-auto order-2" data-aos="fade-up">
-            <div id="animation"></div>
-          </div>
-
-          <div class="col-md-7 mb-5 mb-md-0" data-aos="fade-up">
-            <p><img src="assets/img/about.jpeg" alt="Image" class="img-fluid"></p>
-            <p>Born in Madeira Island (2003), Diogo Nóbrega discovered his passion for music at an early age. 
-              From an early age, he was fascinated by learning different instruments, nurturing a continuous desire to explore the world of sound. 
-              Today, he defines himself as a multimedia artist with a particular focus on sound. 
-              Driven by experimentalism, Diogo finds inspiration in creating new sounds, often using unconventional or non-typically musical elements. 
-              He always seeks to integrate his minimalist sounds with visuals that convey the same feeling. 
-              For Diogo, each piece is a conversation between sound and image, where experimentation is the guiding thread of artistic expression.</p>
-
-              <p>edeprojworks@gmail.com</p>
-            <p><a href="#" class="readmore">Download my CV</a></p>
+        <div class="row justify-content-center text-center">
+          <div class="col-12 social">
+            <a href="https://www.instagram.com/diogo_jvn/"><span class="bi bi-instagram"></span></a>
+            <a href="https://www.youtube.com/@diogo_jvn/videos"><span class="bi bi-youtube"></span></a>
+            <a href="https://www.linkedin.com/in/diogojvn/"><span class="bi bi-linkedin"></span></a>
+            <a href="https://www.artstation.com/diogo_jvn"><span class="bi bi-box"></span></a>
           </div>
         </div>
       </div>
-    </section>
-  </main><!-- End #main -->
-
-   <!-- ======= Footer ======= -->
- <footer class="footer" role="contentinfo">
-  <div class="container">
-    <div class="row justify-content-center text-center">
-      <div class="col-12 social">
-        <a href="https://www.instagram.com/diogo_jvn/"><span class="bi bi-instagram"></span></a>
-        <a href="https://www.youtube.com/@diogo_jvn/videos"><span class="bi bi-youtube"></span></a>
-        <a href="https://www.linkedin.com/in/diogojvn/"><span class="bi bi-linkedin"></span></a>
-        <a href="https://www.artstation.com/diogo_jvn"><span class="bi bi-box"></span></a>
-        
-      </div>
-    </div>
+    </footer>
   </div>
-</footer>
 
-<a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
   <!-- Vendor JS Files -->
   <script src="assets/vendor/aos/aos.js"></script>
@@ -125,25 +196,15 @@
   <script src="assets/js/main.js"></script>
 
   <script>
-    // function setup() {
-    //   let canvas = createCanvas(400, 400);
-    //   canvas.parent('animation');
-    //   canvas.style('background-color', 'rgba(19, 20, 21, 0.8)');  // Fundo com opacidade
-    //   angleMode(DEGREES);
-    // }
     var constellation = [];
     var n;
     var d;
 
     function setup() {
-      let canvas = createCanvas(600, 600);
-      canvas.parent('animation');
-      //pixelDensity(1); // Set 1 because it's too slow on firefox
-      //pixelDensity(displayDensity());
-      canvas.style('background-color', 'rgba(19, 20, 21, 0.8)');  // Fundo com opacidade
+      let canvas = createCanvas(windowWidth, windowHeight);
+      canvas.parent('background-animation');
       pixelDensity(displayDensity());
-     
-      smooth(); // Add this line
+      smooth();
       n = 200;
 
       for (var i = 0; i <= n; i++) {
@@ -152,68 +213,63 @@
       strokeWeight(0.75);
       stroke('#1ABC9C');
     }
+    
+    function windowResized() {
+      resizeCanvas(windowWidth, windowHeight);
+    }
               
     function draw() {
-
       background(20);
 
       for (var i = 0; i < constellation.length; i++) {
         constellation[i].update();
         for (var j = 0; j < constellation.length; j++) {
-          if (i > j) { // "if (i > j)" => to check one time distance between two stars
-            d = constellation[i].loc.dist(constellation[j].loc); // Distance between two stars
-            if (d <= width / 8) { // if d is less than width/10 px, we draw a line between the two stars
+          if (i > j) {
+            d = constellation[i].loc.dist(constellation[j].loc);
+            if (d <= width / 8) {
               line(constellation[i].loc.x, constellation[i].loc.y, constellation[j].loc.x, constellation[j].loc.y)
             }
           }
         }
       }
-
     }
 
     function star() {
-
-      this.a = random(5 * TAU); // "5*TAU" => render will be more homogeneous
-      this.r = random(width * .4, width * .25); // first position will looks like a donut
+      this.a = random(5 * TAU);
+      this.r = random(width * .4, width * .25);
       this.loc = createVector(width / 2 + sin(this.a) * this.r, height / 2 + cos(this.a) * this.r);
       this.speed = createVector();
       this.speed = p5.Vector.random2D();
-      //this.speed.random2D();
       this.bam = createVector();
       this.m;
 
-
       this.update = function() {
-          this.bam = p5.Vector.random2D(); // movement of star will be a bit erractic
-          //this.bam.random2D();
-          this.bam.mult(0.45);
-          this.speed.add(this.bam);
-          var distance = dist(this.loc.x, this.loc.y, mouseX, mouseY);
-          if (distance > width) { // or whatever limit you want
-        // Apply some default behavior, or do nothing
-          return; // Skip the rest of the update for this star
-          }
-          // speed is done according distance between loc and the mouse :
-          this.m = constrain(map(dist(this.loc.x, this.loc.y, mouseX, mouseY), 0, width, 8, .05), .05, 8); // constrain => avoid returning "not a number"
-          this.speed.normalize().mult(this.m);
+        this.bam = p5.Vector.random2D();
+        this.bam.mult(0.45);
+        this.speed.add(this.bam);
+        var distance = dist(this.loc.x, this.loc.y, mouseX, mouseY);
+        if (distance > width) {
+          return;
+        }
+        
+        this.m = constrain(map(dist(this.loc.x, this.loc.y, mouseX, mouseY), 0, width, 8, .05), .05, 8);
+        this.speed.normalize().mult(this.m);
 
-          // No colision detection, instead loc is out of bound
-          // it reappears on the opposite side :
-          if (dist(this.loc.x, this.loc.y, width / 2, height / 2) > (width / 2) * 0.98) {
-            if (this.loc.x < width / 2) {
-              this.loc.x = width - this.loc.x - 4; // "-4" => avoid blinking stuff
-            } else if (this.loc.x > width / 2) {
-              this.loc.x = width - this.loc.x + 4; // "+4"  => avoid blinking stuff
-            }
-            if (this.loc.y < height / 2) {
-              this.loc.y = width - this.loc.y - 4;
-            } else if (this.loc.x > height / 2) {
-              this.loc.y = width - this.loc.y + 4;
-            }
+        if (dist(this.loc.x, this.loc.y, width / 2, height / 2) > (width / 2) * 0.98) {
+          if (this.loc.x < width / 2) {
+            this.loc.x = width - this.loc.x - 4;
+          } else if (this.loc.x > width / 2) {
+            this.loc.x = width - this.loc.x + 4;
           }
-          this.loc = this.loc.add(this.speed);
-        } // End of update()
-    } // End of class
+          if (this.loc.y < height / 2) {
+            this.loc.y = width - this.loc.y - 4;
+          } else if (this.loc.x > height / 2) {
+            this.loc.y = width - this.loc.y + 4;
+          }
+        }
+        this.loc = this.loc.add(this.speed);
+      }
+    }
   </script>
 
 </body>
