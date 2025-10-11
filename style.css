@@ -1,0 +1,158 @@
+/* ======== TEMA GERAL ======== */
+body.dark-theme {
+  background-color: #1f1f1f;
+  color: #ddd;
+  font-family: 'Space Grotesk', sans-serif;
+  transition: background 0.4s, color 0.4s;
+}
+
+/* ======== CABEÇALHO ======== */
+header .logo {
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  color: #f1f1f1;
+}
+
+.logo a {
+  color: inherit;
+  text-decoration: none;
+  transition: opacity 0.3s;
+}
+
+.logo a:hover {
+  opacity: 0.8;
+}
+
+/* ======== NAVEGAÇÃO ======== */
+nav a {
+  margin-left: 1.5rem;
+  color: #aaa;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+nav a:hover,
+nav a.active {
+  color: #fff;
+  text-decoration: underline;
+}
+
+/* ======== CARTÕES DE PROJETOS (index e outras páginas) ======== */
+.project-card {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.3s, opacity 0.3s;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  opacity: 0.9;
+}
+
+/* --- IMAGENS DOS PROJETOS (index e outras páginas) --- */
+.project-card img {
+  width: 100%;
+  height: 250px; /* podes ajustar: 200px, 300px, etc */
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 3px 15px rgba(0,0,0,0.3);
+  transition: transform 0.3s, opacity 0.3s;
+}
+
+@media (min-width: 992px) {
+  .project-card img {
+    height: 300px;
+  }
+}
+
+/* --- IMAGENS DOS PROJETOS (páginas internas) --- */
+main .row img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 3px 15px rgba(0,0,0,0.3);
+  transition: transform 0.3s, opacity 0.3s;
+}
+
+main .row img:hover {
+  transform: translateY(-5px);
+  opacity: 0.9;
+}
+
+@media (min-width: 992px) {
+  main .row img {
+    height: 400px;
+  }
+}
+
+/* ======== TÍTULOS E RODAPÉ ======== */
+h2 {
+  margin-top: 1rem;
+  font-weight: 500;
+}
+
+footer {
+  color: #888;
+  font-size: 0.9rem;
+}
+
+/* ======== ANIMAÇÃO ======== */
+.fade-in {
+  animation: fadeIn 0.8s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ======== VIDEOS ======== */
+.video-wrapper iframe {
+  border-radius: 12px;
+  box-shadow: 0 4px 30px rgba(0,0,0,0.4);
+}
+
+/* ========================================================= */
+/* ======== AJUSTE APENAS PARA A PÁGINA DISCOGRAFIA ======== */
+/* ========================================================= */
+
+body.discografia-page .album-image-wrapper {
+  width: 100%;
+  aspect-ratio: 1 / 1; /* mantém quadrado */
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 3px 15px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+body.discografia-page .album-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+body.discografia-page .album-link:hover .album-image {
+  transform: scale(1.05);
+  opacity: 0.95;
+}
+
+body.discografia-page .album-link:hover .album-image-wrapper {
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.25);
+}
+
+body.discografia-page h2 {
+  margin-top: 1rem;
+  font-weight: 500;
+  color: #f5f5f5;
+}
+
+body.discografia-page p {
+  color: #bbb;
+}
+
+
+
