@@ -156,3 +156,78 @@ body.discografia-page p {
 
 
 
+.linktree-btn {
+  font-family: 'Space Grotesk', sans-serif;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  padding: 0.5rem 1.6rem;
+  border-width: 1px;
+}
+
+.linktree-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.35);
+}
+
+
+/* DIY Synths page */
+.synths-page .page-title {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  font-size: 0.95rem;
+}
+
+.synths-page .page-subtitle {
+  max-width: 38rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* List items */
+.synth-item {
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  padding-top: 1.8rem;
+}
+
+.synth-item:first-of-type {
+  border-top: none;
+  padding-top: 0;
+}
+
+.synth-title {
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+.synth-meta {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: rgba(255, 255, 255, 0.55);
+}
+
+.synth-text {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.synth-notes li {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* Make images behave like videos inside ratio containers */
+.synth-video img {
+  object-fit: cover;
+  display: block;
+  border-radius: 0.4rem;
+}
+
+/* Small hover touch */
+@media (hover: hover) {
+  .synth-item:hover .synth-video {
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.7);
+    transform: translateY(-2px);
+    transition: all 0.18s ease;
+  }
+}
